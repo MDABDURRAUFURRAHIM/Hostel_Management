@@ -1,0 +1,56 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block body %}
+
+<div class="text-center mt-3">
+    <h1><b>Contact Me</b></h1><hr/>
+</div>
+
+<div class="container mt-5">
+
+    <form method="post">
+        {% csrf_token %}
+        <img src="{% static 'images/pic8.png' %}" class="img-fluid w-100 p-3 " alt="My_Photo">
+
+        
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Name</label>
+            <input name="name" class="form-control"  placeholder="Your Name Please">
+          </div>
+    
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Student Id</label>
+            <input name="studentid" class="form-control"  placeholder="Your Student Id Please ">
+          </div>
+    
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Email Address</label>
+            <input name="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+          </div>
+    
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Department</label>
+            <input name="departnment" class="form-control"  placeholder="Your Department Please">
+          </div>
+    
+          
+    
+          <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Message</label>
+            <textarea name="message" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          </div>
+
+          <div>
+            <input class="btn btn-primary" type="submit" value="Submit">
+          </div>
+    
+</form>
+
+</div>
+
+
+
+
+
+{% endblock %}

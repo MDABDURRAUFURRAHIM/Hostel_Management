@@ -1,0 +1,68 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+
+{% block body %}
+
+<div class="text-center mt-3">
+    <h1><b>Room Book</b></h1><hr/>
+</div>
+
+
+<div>
+  <img src="{% static 'images/pic1.png' %}" class="img-fluid w-100 p-3 " alt="My_Photo">
+</div>
+
+
+<div>
+    <div>
+        <div class="container mt-5">
+    
+            <form method="post">
+                {% csrf_token %}
+            
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Name</label>
+                    <input name="name" class="form-control"  placeholder="Your Name Please">
+                  </div>
+            
+                  <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Student Id</label>
+                    <input name="studentid" class="form-control"  placeholder="Your Student Id Please ">
+                  </div>
+            
+                  <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Email Address</label>
+                    <input name="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                  </div>
+            
+    
+                  <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Hall Name</label>
+                    <input name="hallname" class="form-control"  placeholder="Enter The Hall Name">
+                  </div>
+
+
+                  <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Room No</label>
+                    <input name="roomno" class="form-control"  placeholder="Enter The Room No">
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Floor No</label>
+                    <input name="floorno" class="form-control"  placeholder="Enter The Floor No">
+                  </div>
+    
+            
+                  
+                  <div>
+                    <input class="btn btn-primary" type="submit" value="Submit">
+                  </div>
+            
+        </form>
+        
+        </div>
+    </div>
+</div>
+
+{% endblock %}
